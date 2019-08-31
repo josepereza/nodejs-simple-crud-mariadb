@@ -1,0 +1,71 @@
+<div class="row">
+    <div class="col s12 m6">
+        <h3 class="center-align">LISTADO</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Item Name</th>
+
+                </tr>
+            </thead>
+            {{#each rows}}
+
+
+
+            <tbody>
+                <tr>
+                    <td>{{nombre}}</td>
+                    <td>{{poblacion}}</td>
+                    <td>
+                        <form method="POST" action="/users/borrar/{{id}}">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                    <td>
+                        <a href="/users/editar/{{id}}">EDITAR</a>
+                    </td>
+                </tr>
+
+            </tbody>
+
+
+
+            {{/each}}
+        </table>
+    </div>
+    <div class="col s12 m6">
+        <h3 class="center-align">ALTAS</h3>
+
+        <form method="post" action="/users/grabar">
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="text" type="text" class="validate" name="nombre">
+                    <label for="text">Nombre</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="poblacion" type="text" class="validate" name="poblacion">
+                    <label for="poblacion">Poblacion</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="saldo" type="number" class="validate" name="saldo">
+                    <label for="saldo">Saldo</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="enviar" type="submit" class="button">
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</div>

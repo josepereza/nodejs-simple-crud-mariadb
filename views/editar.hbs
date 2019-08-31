@@ -1,0 +1,30 @@
+<div class="container">
+<h3 class="center-align">MODIFICAR</h3>
+    <div class="row">
+        <form class="col s12" method="POST" action="/users/modificar/{{row.id}}">
+            <div class="row">
+                <div class="input-field col s126">
+                    <input placeholder="Placeholder" id="nombre" type="text" class="validate" value="{{row.nombre}}" name="nombre">
+                    <label for="nombre">Nombre</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="poblacion" type="text" class="validate" value="{{row.poblacion}}" name="poblacion">
+                    <label for="poblacion">Poblacion</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input  name="saldo" id="saldo" type="text"  value="{{row.saldo}}" class="validate">
+                    <label for="saldo">saldo</label>
+                </div>
+            </div>
+
+             <div class="row">
+               <input class="button" type="submit" value="ENVIAR">
+            </div>
+            
+
+        </form>
+    </div>
+
+</div>
